@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding: 0.5em 0 0.2em 0;
+  text-align: center;
+  
+  font-size: 4em;
+  font-family: arial;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  
+  font-family: arial;
+  font-size: 2em;
+}
+
+h3{
+    text-align: center;
+    
+    font-family: arial;
+    font-size: 1.5em;
+}
+
+p{
+  padding: 0 0 1em 0;
+  text-align: center;
+  
+  font-size: 2em;
+  font-family: arial;
+}
+
+figure{
+    display: block;
+    text-align: center;
+}
+
+#img-caption{
+  visibility: hidden;;
+}
+
+#image {
+  width:100%;
+  height:auto;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}
+
+#tribute-info{
+  padding-left: 2em;
+}
+
+#deprivation, #improve{
+  margin-bottom:3em;
+  padding: 0 10em 0 10em;
+}
+
+ol{
+  text-align: justify;
+  font-family: arial;
+  font-size: 1em;
+}
+
+li{
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+section{
+    margin-bottom: 2em;
+}
