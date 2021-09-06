@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Resume  Form</h1>
+    <p id="description">Fill out your information and we will contact you</p>
+    <form id="survey-form">
+        <div class="form">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form">
+            <label for="number" id="number-label">Work experience</label>
+            <input type="number" id="number" name="work-experience" min="0" max="50" required>
+        </div>
+        <div class="form">
+            <p id="position">The position you want to fill</p>
+            <select name="position" id="dropdown">
+                <option disabled selected value="">Select position</option>
+                <option value="junior">Junior Developer</option>
+                <option value="middle">Middle Developer</option>
+                <option value="senior">Senior Developer</option>
+                <option value="leader">Team Leader</option>
+                <option value="manager">Project Manager</option>
+            </select>
+        </div>
+        <div class="form">
+            <p id="remotely">Are you ready to work remotely?</p>
+            <label>
+                <input type="radio" id="ready" name="work-remotely" value="ready">Ready
+            </label>
+            <label>
+                <input type="radio" id="not-ready" name="work-remotely" value="not-ready">Not ready
+            </label>
+            <label>
+                <input type="radio" id="sometimes" name="work-remotely" value="sometimes">Sometimes
+            </label>
+        </div>
+        <div class="form">
+            <p id="strenghts">What are your strengths?</p>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">HTML and CSS
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">JavaScript
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">React
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">Vue.js
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">Angular
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">Svelte
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">Python
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">SQL
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">Django
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">Algorithms
+            </label>
+            <label>
+                <input name="strenghts" type="checkbox" class="input-strenghts">TypeScript
+            </label>
+        </div>
+        <div class="form">
+            <p id="difficulties">Tell us about the difficulties you have encountered on projects</p>
+            <textarea name="comment" id="comment" placeholder="Enter your comment"></textarea>
+        </div>
+        <div class="form">
+            <button id="button" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
