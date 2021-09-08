@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+}
+
+main {
+    margin-left: 320px;
+} 
+
+@media (max-width: 815px) {
+    #navbar {
+        width: 200px;
+    }
+    
+    main {
+        margin-left: 220px;
+    } 
+}
+

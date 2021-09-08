@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header id="title">10 useful tricks for JavaScript programmers</header>
+        <ul>
+            <li><a href="#Checking_for_mandatory_function_parameters" class="nav-link">Checking for mandatory function parameters</a></li>
+            <li><a href="#Formatting_JSON_code" class="nav-link">Formatting JSON code</a></li>
+            <li><a href="#Extract_unique_values_from_an_array" class="nav-link">Extract unique values from an array</a></li>
+            <li><a href="#Removing_false_values_from_an_array" class="nav-link">Removing false values from an array</a></li>
+            <li><a href="#Combining_several_objects_into_one" class="nav-link">Combining several objects into one</a></li>
+            <li><a href="#Sorting_numeric_arrays" class="nav-link">Sorting numeric arrays</a></li>
+            <li><a href="#Disabling_right-click_action" class="nav-link">Disabling right-click action</a></li>
+            <li><a href="#Destructive_assignment_with_variable_renaming" class="nav-link">Destructive assignment with variable renaming</a></li>
+            <li><a href="#Getting_elements_from_the_end_of_an_array" class="nav-link">Getting elements from the end of an array</a></li>
+            <li><a href="#Waiting_for_the_completion_of_all_promises" class="nav-link">Waiting for the completion of all promises</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Checking_for_mandatory_function_parameters">
+            <header>1. Checking for mandatory function parameters</header>
+            <article>
+                <p>JavaScript allows you to define default values for function parameters. Knowing this, we can implement an interesting way to check for mandatory parameters when calling functions and methods:</p>
+                <code>const isRequired = () => { throw new Error('param is required'); };
+                    const print = (num = isRequired()) => { console.log(`printing ${num}`) };
+                    print(2);//printing 2
+                    print()// error
+                    print(null)//printing null
+               </code>
+            </article>
+        </section>
+        <section class="main-section" id="Formatting_JSON_code">
+            <header>2. Formatting JSON code</header>
+            <article>
+                <p>You're probably very familiar with the JSON.stringify() method. And did you know that you can use this method to format JSON code? It's actually very simple.</p>
+                <p>The stringify() method takes three parameters. They are value, replace, and space. The last two parameters in this list are optional. That's why you may not have used them before. To configure JSON code alignment you should use the space parameter.</p>
+                <code>console.log(JSON.stringify({name:"John",Age:23},null,'\t'));
+                    >>> 
+                    {
+                     "name": "John",
+                     "Age": 23
+                    }
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Extract_unique_values_from_an_array">
+            <header>3. Extract unique values from an array</header>
+            <article>
+                <p>In the past, if you wanted to extract unique values from an array, you had to use the filter() method, which filters out duplicate values. Now you can use a new standard JavaScript object of type Set to do that. This is much easier and more convenient than filtering an array.</p>
+                <code>
+                    let uniqueArray = [...new Set([1, 2, 3, 3,3,"school","school",'ball',false,false,true,true])];
+                    >>> [1, 2, 3, "school", "ball", false, true]
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Removing_false_values_from_an_array">
+            <header>4. Removing false values from an array</header>
+            <article>
+                <p>It happens that you need to remove false values from an array. These are the values which in JavaScript are set to false. There are only 6 such values in the language (including false itself):</p>
+                <ul>
+                    <li>undefined</li>
+                    <li>null</li>
+                    <li>NaN</li>
+                    <li>0</li>
+                    <li>"" (empty string)</li>
+                    <li>false</li>
+                </ul>
+                <p>Such values are easiest to filter out of an array using the following construction:</p>
+                <code>
+                    myArray
+                        .filter(Boolean);
+               </code>
+               <p>If you want to modify the original array in some way, and then filter the  new array afterwards, you can try something like the following code:
+               When using such a construction, keep in mind that the original array, myArray, remains unchanged.</p>
+               <code>myArray
+                    .map(item => {
+                        // Выполнить изменения и вернуть новый элемент
+                    })
+                    .filter(Boolean);
+               </code>
+               <p>When using such a construction, keep in mind that the original array, myArray, remains unchanged.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Combining_several_objects_into_one">
+            <header>5. Combining several objects into one</header>
+            <article>
+                <p>I have had several cases where it was necessary to merge two or more objects. In such cases, I usually use the following technique:</p>
+                <code>const user = { 
+                     name: 'John Ludwig', 
+                     gender: 'Male' 
+                     };
+                    const college = { 
+                     primary: 'Mani Primary School', 
+                     secondary: 'Lass Secondary School' 
+                     };
+                    const skills = { 
+                     programming: 'Extreme', 
+                     swimming: 'Average', 
+                     sleeping: 'Pro' 
+                     };
+                    const summary = {...user, ...college, ...skills};
+               </code>
+               <p>The three dots used in the last line of this example are the spread operator. </p>
+            </article>
+        </section>
+        <section class="main-section" id="Sorting_numeric_arrays">
+            <header>6. Sorting numeric arrays</header>
+            <article>
+                <p>JavaScript arrays have a standard sort() method. It, by default, converts the array elements into strings and performs lexicographic sorting. This can cause problems when trying to sort numeric arrays. Such problems, however, are very easy to prevent:</p>
+                <code>
+                    [0,10,4,9,123,54,1].sort((a,b) => a-b);
+                    >>> [0, 1, 4, 9, 10, 54, 123]
+                </code>
+                <p>A function that compares two elements of a numeric array is passed to the sort() method. Thanks to this function, the numeric array can be sorted as needed.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Disabling_right-click_action">
+            <header>7. Disabling right-click action</header>
+            <article>
+                <p>You may want to prohibit users of your site from right-clicking context menus of items. Although it's not often needed, sometimes it can come in handy.</p>
+                <code>
+                    &lt;body oncontextmenu="return false">
+                        &lt;div>&lt;/div>
+                    &lt;/body>
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Destructive_assignment_with_variable_renaming">
+            <header>8. Destructive assignment with variable renaming</header>
+            <article>
+                <p>The destructive assignment syntax is used in JavaScript expressions aimed at unpacking array elements or object properties into individual variables. Instead of using the existing names of object properties, the corresponding variables can be renamed:</p>
+                <code>const object = { number: 10 };
+                    //  Extract the value of the number property to a constant of the same name
+                    const { number } = object;
+                    // Extracting the value of the number property and assigning the variable name otherNumber
+                    const { number: otherNumber } = object;
+                    console.log(otherNumber); //10
+               </code>
+            </article>	
+        </section>
+        <section class="main-section" id="Getting_elements_from_the_end_of_an_array">
+            <header>9. Getting elements from the end of an array</header>
+            <article>
+                    
+                <p>If you need to get the elements at the end of the array, you can use the slice() array method, which is passed a negative number:</p>
+                <code>
+                    let array = [0, 1, 2, 3, 4, 5, 6, 7] 
+                    console.log(array.slice(-1));
+                    >>>[7]
+                    console.log(array.slice(-2));
+                    >>>[6, 7]
+                    console.log(array.slice(-3));
+                    >>>[5, 6, 7]
+               </code>
+            </article>
+        </section>
+        <section class="main-section" id="Waiting_for_the_completion_of_all_promises">
+            <header>10. Waiting for the completion of all promises</header>
+            <article>
+                <p>It may happen that there is a need to wait for several promises to complete. In order to wait for several promises to complete, you can use the Promise.all() method. The main purpose of this method is to wait for the resolution of all the promises that have been passed to it.</p>
+                <code>
+                    const PromiseArray = [
+                        Promise.resolve(100),
+                        Promise.reject(null),
+                        Promise.resolve("Data release"),
+                        Promise.reject(new Error('Something went wrong'))];
+                    Promise.all(PromiseArray)
+                      .then(data => console.log('all resolved! here are the resolve values:', data))
+                      .catch(err => console.log('got rejected! reason:', err))
+               </code>
+               <p>When working with Promise.all() it is important to know that this method will throw an error if at least one of the promises it receives is rejected. This will cause Promise.all() not to wait for all the promises to finish.</p>
+               <p>But if you need to wait for all the promises to finish, regardless of whether they are successfully resolved or rejected, you should use the Promise.allSettled() method. This method is available in the final agreed version of the ES2020 standard.</p>
+               <code>
+                   const PromiseArray = [
+                        Promise.resolve(100),
+                        Promise.reject(null),
+                        Promise.resolve("Data release"),
+                        Promise.reject(new Error('Something went wrong'))];
+                    Promise.allSettled(PromiseArray).then(res =>{
+                    console.log(res);
+                    }).catch(err => console.log(err));
+                    //[
+                    //{status: "fulfilled", value: 100},
+                    //{status: "rejected", reason: null},
+                    //{status: "fulfilled", value: "Data release"},
+                    //{status: "rejected", reason: Error: Something went wrong ...}
+                    //]
+               </code>
+               <p>Now, even though some promises are rejected, Promise.allSettled() returns the results of all promises.</p>
+            </article>
+        </section>
+        
+    </main>
+</body>
+</html>
