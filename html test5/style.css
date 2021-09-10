@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    position: fixed;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:not(:last-child) {
+    padding-right: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+#welcom-section {
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+/*при прокрутке ставиться печать 'web developer'*/
+#title-p {
+    font-size: 3em;
+    letter-spacing: 3px;
+    font-style: italic;
+    color: blueviolet;
+}
+
+@media (min-width: 700px;)
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
