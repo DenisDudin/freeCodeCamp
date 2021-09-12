@@ -2,47 +2,111 @@
     margin: 0;
     padding: 0;
     font-family: arial;
-    color: #4F2982;
 }
 
+/*
+html {
+    height: 100%;
+}
+*/
+
 body{
-    background: rgba(1,1,1,01);
+    background: linear-gradient(to bottom, black, 40%, cyan) no-repeat;
 }
 
 h1{
     padding: 0.5em 0 0.1em 0;
+    margin-bottom: 0.2em;
     text-align: center;
     
     font-size: 4em;
-    text-shadow: white 2px 2px 4px;
+    color: #4F2982;
+    
+    text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1);
 }
 
 #description{
     text-align: center;
     margin-bottom: 2em;
     
-    font-size: 1.5em;
-    text-shadow: white 2px 2px 1.5px;
+    font-size: 1.7em;
+    color: #4F2982;
+    text-shadow: 1px 1px 0px rgba(190,190,190,1);
 }
 
 #survey-form {
-    margin: 0 100px 0 100px;
-    background: rgba(211,222,255,0.9);
-    
+    margin: 0 15%;
+    background: rgba(15,15,15,0.6);
     font-size: 1.5em;
-    border-radius: 15px;
+    
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px rgba(155, 11, 221, 0.3);
+}
+
+form {
+    padding: 10px 0 10px;
 }
 
 .form {
-    margin: 5px 30px 5px 30px;
+    margin: 15px 30px;
+    color: azure;
 }
 
-#name {
-    margin-top: 30px;
+p, #name-label, #email-label, #number-label {
+    font-size: 1.1em;
+    margin-bottom: 7px;
+    text-shadow: 2px -2px 4px rgba(155, 11, 221, 0.9);
 }
 
-#button {
-    margin-bottom: 30px;
+label, input {
+    display: block;
+}
+
+.input-strenghts, .remotely {
+    display: inline;
+    margin: 0 5px;
     
+    border-radius: 15px;
+    height: 1.5em;
+    width: 1.5em;
+}
 
+input[type="text"], [type="email"], [type="number"], select, textarea {
+    padding: 0 5px;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 2em;
+    
+    background-color:cadetblue;
+    color: azure;
+    
+    font-size: 0.9em;
+}
+
+textarea {
+    padding-top: 5px;
+    height: 5em;
+}
+
+
+.form:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 8em;
+    height: 2.5em;
+    border-radius: 15px;
+    border-color: antiquewhite;
+    
+    background-color: rgba(155, 11, 221, 0.6);
+    box-shadow: 0px 0px 2px 2px azure;
+    
+    font-size: 0.7em;
+    color: azure;
+    
 }
