@@ -2,15 +2,14 @@
     margin: 0;
     padding: 0;
     font-family: Oswald;
-    border-radius: 0;
+    box-sizing: border-box;
 }
 
 body {
-    
     height: 1000px;
 }
 
-header {
+#header {
     display: flex;
     padding: 15px 10px;
     margin-bottom: 30px;
@@ -26,8 +25,24 @@ header {
     display: flex;
 }
 
-img {
-    margin: 0 20px;
+#header-img {
+    margin: 0 10px 0 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+#logo-p {
+    font-size: 1.5em;
+}
+
+nav {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    
+    margin-right: 20px;
 }
 
 ul {
@@ -36,38 +51,125 @@ ul {
 
 li {
     list-style-type: none;
-    padding-right: 15px;
+    padding-right: 20px;
     
     font-weight: 600;
-    font-size: 1.4em;
+    font-size: 1.7em;
 }
 
-
-nav {
-    margin-top: 10px;
-}
 
 a {
     text-decoration: none; 
     color: black;
 }
 
+a:hover {
+    font-size: 1.1em;
+    color: rgba(62,72,122,1)
+}
+
 main {
-    margin: 0 10%;;
+    margin: 0 15%;;
     align-items: center;
 }
 
-h2 {
-    font-size: 1.9em;
+.heading {
+    margin-bottom: 20px;
+    width: 12em;
     
-    border-radius: 15px 0 0 15px;
+    border-radius: 20px 0 0 20px;
     background: linear-gradient(to right, #59c5cb, #ffffff);
 }
 
-@media (min-width: 100px) {
+.about__container {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 5px 40px;
+    
+    -ms-align-items: center;
+    align-items: center;
+    
+    font-size: 1.5em;
+}
+
+#video {
+    display: relative;
+}
+
+h2 {
+    padding-left: 15px;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.works__container {
+    margin: 0 30px 20px 30px;
+}
+
+.work-container {
+    display: inline-block;
+    margin-bottom: 50px;
+    width: 33%;
+}
+
+.works__card {
+    width: 300px;
+}
+
+.header-work {
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.img-work, #video {
+    margin-bottom: 15px;
+}
+
+.contacts__container {
+    display: flex;
+    margin: 10px 20px;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+
+.my-contact {
+    margin-bottom: 5px;
+}
+
+.form {
+    margin-bottom: 10px;
+}
+
+#submit {
+    width: 100px;
+    border-radius: 10px;
+    font-size: 1em;
+    background: linear-gradient(to bottom right, #125898, #59c5cb);
+}
+
+
+@media (max-width: 1000px) {
+    .about__img {
+        width: 250px;
+        height: 360px;
+    }
     
 }
 
-@media (min-height: 350px) {
-    
+@media (max-width: 1500px) {
+    .work-container {
+        width: 49%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .work-container {
+        display: block;
+        width: 51%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

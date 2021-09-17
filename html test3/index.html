@@ -11,7 +11,7 @@
 <body>
     <header id="header">
         <div id="logo">
-            <img src="stopa.png" width=70px height=70px alt="" id="header-img">
+            <img class="logo__img" src="stopa.png" width=70px height=70px alt="" id="header-img">
             <div class="name">
                 <h1 id="logo-h1">Дудина Ирина Сергеевна</h1>
                 <p id="logo-p">Врач-подолог</p>
@@ -34,21 +34,84 @@
     </header>
     <main>
         <div class="about">
-            <h2>О себе</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eos rerum dolorem velit temporibus pariatur reiciendis eaque, veritatis laudantium. Eos dolor fugit maxime, consectetur qui similique repudiandae, minima ex cumque.</p>
-            <iframe src="https://www.youtube.com/watch?v=rquKMyUlRqM" frameborder="0" id="video"></iframe>
+            <div class="heading">
+                <h2>О себе</h2>
+            </div>
+            <div class="about__container">
+                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut eos quibusdam ullam alias ipsum ea aspernatur eaque voluptates cumque natus dolorem eveniet eum minima harum dolores, voluptate, eius nulla?</span><span>Sapiente suscipit error, iure aperiam tempora eveniet, nostrum quasi natus quas nisi minus nesciunt qui ipsam quos eos sit veritatis adipisci harum esse vero at incidunt. Dicta corrupti, quaerat molestiae?</span></p>
+                <img class="about__img" src="about.png" width=350px height=500px alt="" >
+            </div>
         </div>
         
-        <form action="https://www.freecodecamp.com/email-submit" class="call" id="form">
-            <div class="form">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Введите вашу почту" required>
+        <section class="works">
+            <div class="heading">
+                <h2>Работы</h2>
             </div>
-            <div class="form">
-                <label for=""></label>
-                <input type="submit" id="submit" value="Отправить">
+            <div class="works__container">
+                    <div class="work-container">
+                        <div class="works__card">
+                            <header class="header-work">Work one</header>
+                            <img src="http://placehold.it/300x200" alt="" width=300px height=200px class="img-work">
+                            <p class="p-work">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dignissimos, aut natus culpa nobis eaque beatae dolor sunt, illo laudantium laboriosam asperiores. Ducimus assumenda, pariatur! Dolorem aliquid odio magnam velit?</p>
+                        </div>
+                    </div>
+                    <div class="work-container">
+                        <div class="works__card">
+                            <header class="header-work">Work two</header>
+                            <img src="http://placehold.it/300x200" alt="" width=300px height=200px class="img-work">
+                            <p class="p-work">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dignissimos, aut natus culpa nobis eaque beatae dolor sunt, illo laudantium laboriosam asperiores. Ducimus assumenda, pariatur! Dolorem aliquid odio magnam velit?</p>
+                        </div>
+                    </div>
+                    <div class="work-container">
+                        <div class="works__card">
+                            <header class="header-work">Work three</header>
+                            <img src="http://placehold.it/300x200" alt="" width=300px height=200px class="img-work">
+                            <p class="p-work">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dignissimos, aut natus culpa nobis eaque beatae dolor sunt, illo laudantium laboriosam asperiores. Ducimus assumenda, pariatur! Dolorem aliquid odio magnam velit?</p>
+                        </div>
+                    </div>
+                    <div class="work-container">
+                        <div class="works__card">
+                            <header class="header-work">Work four</header>
+                            <iframe src="//www.youtube.com/watch?v=L-iepu3EtyE" frameborder="0" id="video" width=300px height=200px></iframe>
+                            <p class="p-work">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum dignissimos, aut natus culpa nobis eaque beatae dolor sunt, illo laudantium laboriosam asperiores. Ducimus assumenda, pariatur! Dolorem aliquid odio magnam velit?</p>
+                        </div>
+                    </div>                    
+                </div>
+            
+        </section>
+        
+        <section class="contacts">
+            <div class="heading">
+                <h2>Контакты</h2>
             </div>
-        </form>
+            
+            <div class="contacts__container">
+                <div class="contacts__left">
+                    <p class="my-contact">
+                        Phone: +79606334111
+                    </p>
+                    <p class="my-contact">
+                        Email: dudina@gmail.com
+                    </p>
+                    <p class="my-contact">
+                        Instagram: zubko_podolog
+                    </p>    
+                </div>
+                <div class="contacnts__right">
+                    <form action="https://www.freecodecamp.com/email-submit" class="call" id="form">
+                        <div class="form">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Введите вашу почту" required>
+                        </div>
+                        <div class="form">
+                            <label for=""></label>
+                            <input type="submit" id="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
     </main>
 </body>
 </html>
