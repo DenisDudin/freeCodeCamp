@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+  color: aliceblue;
+  background-color: #3a3939;
+}
+
+.name {
+  margin-left: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head {
+  font-size: 4em;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+#counter {
+  display: flex;
+  margin: 0 auto;
+  padding-left: 16px ;
+  align-items: center;
+
+  font-size: 2em;
+  border: 3px solid white;
+  border-radius: 50%;
+  height: 1.6em;
+  width: 1.6em;
+}
+
+.card {
+  max-width: 600px;
+  min-width: 500px;
+  /* background-color: rgb(211, 235, 255); */
+}
+
+ul {
+  margin: 20px 0;
+}
+
+li {
+  margin: 0 0 25px 35px;
+  font-size: 2em;
+  text-shadow: 2px 1px 3px rgb(179, 134, 169);
+  
+  border-bottom: 1px solid ;
+}
+
+.task:hover {
+  text-decoration: line-through;
+}
+
+.complete {
+  margin: 0 0 25px 35px;
+  font-size: 2em;
+
+  color: rgb(247, 242, 242);
+  text-decoration: line-through;
+  text-shadow: 2px 1px 2px rgb(255, 0, 221);
+  
+  border-bottom: 1px solid ;
+  background-image: url(/trash.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.but-create {
+  margin: 0 0 30px 70%;
+  padding: 7px 10px 2px;
+  width: 160px;
+  height: 40px;
+
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  cursor: pointer;
+  background: #3a3939;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px #4a4747, 5px 5px 15px #1f1e1e, inset 5px 5px 10px #4e4c4c, inset -5px -5px 10px #212020;
+  color: #e6e4e4;
+}
+
+#newItemForm {
+  display: flex;
+  align-items: center;
+}
+
+#itemDescription {
+  margin-left: 30px;
+  padding: 5px 5px 0 5px;
+  width: 350px;
+  height: 40px;
+
+  font-size: 1.5em;
+  color: black;
+
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+#add {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  background: #3a3939;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px #4a4747, 5px 5px 15px #1f1e1e, inset 5px 5px 10px #4e4c4c, inset -5px -5px 10px #212020;
+  color: #e6e4e4;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#add:hover, .but-create:hover {
+  box-shadow: -5px -5px 15px #3e3c3c, 5px 5px 15px #1f1e1e, inset 5px 5px 10px #1b1a1a, inset -5px -5px 10px #1f1e1e;
+  font-size: 1.2em;
+  transition: 500ms;
+  color: #9bf978;
+  text-shadow: 0px 0px 10px #a8fb8a;
+}
+
+#add:focus, .but-create:hover {
+  outline: none;
+}
