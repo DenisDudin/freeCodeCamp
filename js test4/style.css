@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(20deg, rgba(127,212,230,1) 0%, rgb(212, 137, 233) 40%, rgb(121, 157, 224) 64%, rgba(150,198,192,1) 100%);
+  overflow: hidden;
+}
+
+section {
+  margin-top: 10px;
+}
+
+.stages, .row {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin-bottom: 1rem;
+}
+
+.start {
+  background: linear-gradient(90deg, rgba(127,212,230,1) 0%, rgba(210,103,206,1) 100%);
+}
+
+.progress {
+  background: linear-gradient(90deg, rgba(210,103,206,1) 0%, rgba(201,140,65,1) 100%);
+}
+
+.done {
+  background: linear-gradient(90deg, rgba(201,140,65,1) 0%, rgba(19,177,237,1) 100%);
+}
+
+.column {
+  padding: 1rem 1rem;
+  width: 150px;
+  box-shadow: 4px 4px 9px #000;
+  border-radius: 20px;
+  color: aliceblue;
+}
+
+.placeholder {
+  width: 150px;
+  height: 66px;
+}
+
+.task {
+  padding: 1rem 1rem;
+  width: 150px;
+  height: 70px;
+
+  border: 1px solid wheat;
+  border-radius: 20px;
+  /* box-shadow: 4px 4px 9px #000; */
+
+  color:white;
+  text-align: center;
+  cursor: grab;
+}
+
+.hold {
+  border: 2px solid rgb(0, 255, 255);
+}
+
+.hide {
+  display: none;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.hovered {
+  border-top: 1px solid rgb(245, 222, 191);
+}
