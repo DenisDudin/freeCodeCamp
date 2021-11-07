@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sidebar > div {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  color: azure;
+}
+
+.sidebar h1 {
+  margin-bottom: 10px;
+  margin-top: -30px;
+  
+  font-size: 40px;
+}
+
+.main-slide {
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  top: 0;
+  left: 35%;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.main-slide > div {
+  height: 100%;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+button {
+  padding: 15px;
+  background-color: #fff;
+  border: none;
+  color: aqua;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  color: #000;
+}
+
+button:focus {
+  outline: none;
+}
+
+section .controls button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+section .controls .down-but{
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+section .controls .down-up{
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
