@@ -152,7 +152,7 @@ h2 {
 
 .circle {
   position: absolute;
-  background-color: rgb(156, 13, 13);
+  background-color: rgb(124,55,153);
   border-radius: 50%;
   cursor: pointer;
 }
