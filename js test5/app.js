@@ -32,7 +32,7 @@ function changeSlide(direction) {
   }
 
   
-  mainSlide.style.transform = `translateY(-${activeSlide * height}px)`;
-  sidebar.style.transform = `translateY(${activeSlide * height}px)`
+  mainSlide.style.transform = `translateY(-${activeSlide*100}vh)`;
+  sidebar.style.transform = `translateY(${activeSlide*100}vh)`
 }
 
